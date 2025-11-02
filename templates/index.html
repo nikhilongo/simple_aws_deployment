@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Package Prediction</title>
+</head>
+<body>
+    <h2>Predict Student Package</h2>
+    <form action="/predict" method="post">
+        <label>CGPA:</label>
+        <input type="number" name="cgpa" step="0.01" required>
+        <br><br>
+
+        <!-- Add more fields if your model needs them -->
+        <!-- Example:
+        <label>Internships:</label>
+        <input type="number" name="internships">
+        -->
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h3>Predicted Package: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
